@@ -33,7 +33,7 @@ class PokemonIndex extends React.Component {
 
   }
   render() {
-    const desiredPokemon = this.state.pokemons.filter(p =>
+    const search = this.state.pokemons.filter(p =>
       p.name.includes(this.state.searchTerm)
     )
     return (
@@ -45,7 +45,7 @@ class PokemonIndex extends React.Component {
       Search
       </div>
         <br />
-      {this.state.searchTerm===''?<PokemonCollection pokemons={this.state.pokemons} toggle={this.toggle}/>:<PokemonCollection pokemons={desiredPokemon} toggle={this.toggle}/>}
+      {this.state.searchTerm===''?<PokemonCollection pokemons={this.state.pokemons} toggle={this.toggle}/>:<PokemonCollection pokemons={search} toggle={this.toggle}/>}
         <br />
       <PokemonForm handleSubmit={this.handleSubmit}/>
       </div>
