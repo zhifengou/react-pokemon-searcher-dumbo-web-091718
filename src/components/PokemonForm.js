@@ -22,7 +22,7 @@ class PokemonForm extends React.Component {
         Accept: 'application/json'
       },
       body: JSON.stringify({
-        name,
+        name:name,
         stats: [
           {
             value: hp,

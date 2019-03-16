@@ -8,7 +8,7 @@ class PokemonCard extends React.Component {
     return (
       <Card>
         <div>
-          <div className="image" onClick={()=>{toggle(pokemon)}}>
+          <div className="image" onClick = {()=>{toggle(pokemon)}}>
             <img alt="oh no!" src={isClicked?pokemon.sprites.back:pokemon.sprites.front} />
           </div>
           <div className="content">
